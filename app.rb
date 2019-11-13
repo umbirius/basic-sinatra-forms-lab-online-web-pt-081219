@@ -8,13 +8,13 @@ class App < Sinatra::Base
   end 
   
   post '/team' do 
-    @name = params[:name]
-    @coach = params[:coach]
-    @pg = params[:pg]
-    @sg = params[:sg]
-    @sf = params[:sf]
-    @pf = params[:pf]
-    @c = params[:c]
+    @name = params[:name].to_s
+    @coach = params[:coach].to_s
+    @pg = params[:pg].to_s
+    @sg = params[:sg].to_s
+    @sf = params[:sf].to_s
+    @pf = params[:pf].to_s
+    @c = params[:c].to_s
     erb :team 
   end 
   
